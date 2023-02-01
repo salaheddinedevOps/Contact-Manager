@@ -1,0 +1,103 @@
+@media screen and (max-width: 480px) {
+body{
+  width:100%;
+  background-color: rgb(30, 82, 134);
+}
+.App{
+  padding: 50px 0;
+  width:100%;
+  margin: 0 auto;
+  text-align: center;
+}
+input[type="text"]{
+  margin-left: 10px;
+  margin-top: 10px;
+  display: block;
+  background-color: rgb(30, 82, 134);
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 10px 40px;
+}
+input[type="tel"]{
+  margin-left: 10px;
+  margin-top: 10px;
+  display: block;
+  background-color: rgb(30, 82, 134);
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 10px 40px;
+}
+input[type="text"]:focus{
+  border:none;
+}
+input[type="tel"]:focus{
+  border:none;
+}
+button[type='reset']{
+  margin-top: 10px;
+  background-color: gray;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 20px;
+}
+button[type="submit"]{
+  margin-left: 10px;
+  margin-top: 20px;
+  background-color: black;
+  color:rgb(30, 82, 134);
+  border:none;
+  border-radius: 20px;
+  padding: 14px 40px;
+  cursor: pointer;
+  transition: 2s;
+}
+h1{
+  display: inline;
+  font-size: 40px;
+  transition: 4s;
+}
+.form{
+  width:100%;
+  display: inline-block;
+  margin-top: 10%;
+}
+#contact{
+  position: relative;
+}
+#manager{
+  position: relative;
+}
+.content{
+  margin-top: 5px;
+  padding: 2px 20px;
+  display:flex;
+  justify-content: space-between;
+  width:80%;
+  height: 50px;
+  border-radius: 80px;
+  border: 2px solid gray;
+  transition: 3s;
+}
+.container p {
+  color:white;
+}
+p{
+  color:gray;
+  font-size: 10px;
+}
+h2{
+  position: relative;
+}
+h3{
+  color:gray;
+}
+.container{
+  position: relative;
+  width:80%;
+  line-height: 0px;
+  margin: 5% auto;
+  height: 200px;
+  padding: 20px 50px;
+  overflow: scroll;
+}
+}
