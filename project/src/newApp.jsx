@@ -32,6 +32,7 @@ const App = ()=>{
         const updatedItems = [...items].map((item)=>{
             if(item.id === id){
                 item.content = textEditing;
+                alert('Updated')
             }
             return item;
         });
