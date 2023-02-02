@@ -67,6 +67,14 @@ h1{
 #manager{
   position: relative;
 }
+#submitEditButton{
+  margin-top: 10px;
+  background-color: gray;
+  border-radius: 20px;
+  border: none;
+  font-size: 10px;
+  padding: 5px 20px;
+}
 .content{
   margin-top: 5px;
   padding: 2px 20px;
@@ -91,6 +99,10 @@ h2{
 h3{
   color:gray;
 }
+.item-content input{
+  padding: 5px 5px;
+  border: 1px solid gray;
+}
 .container{
   position: relative;
   width:80%;
@@ -99,5 +111,11 @@ h3{
   height: 200px;
   padding: 20px 50px;
   overflow: scroll;
+}
+#exitButton{
+  padding: 0px 5px;
+  border: 1px solid gray;
+  background-color: rgb(30, 82, 134);
+  color:gray;
 }
 }

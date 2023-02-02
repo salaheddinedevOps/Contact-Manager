@@ -1,6 +1,5 @@
 import React,{useState} from  'react';
 import './App.css';
-import './anmiations';
 const App = ()=>{
     const [item,setItem] = useState('');
     const [number,setNumber] = useState('');
@@ -56,7 +55,7 @@ const App = ()=>{
                         {item.id === todoEdit ?(
                             <div>
                             <input type='text' placeholder='Enter Your Edit' onChange={(e)=>{setTextEditing(e.target.value)}} />
-                            <button  onClick={()=>setTodoEdit(7)}>Exit</button>
+                            <button id='exitButton' onClick={()=>setTodoEdit(7)}>X</button>
                             </div>
                             ):(
                                 <div><h3>{item.content}</h3>
@@ -66,8 +65,8 @@ const App = ()=>{
                     </div>
                     <div className='item-actions'>
                         {item.id === todoEdit ?(
-                            <button onClick={()=>submitEdits(item.id)}>SubmiT edit</button>):(
-                            <button type='reset' onClick={()=> setTodoEdit(item.id)}>Edit</button>
+                            <button type='submit' id="submitEditButton" onClick={()=>submitEdits(item.id)}>SubmiT edit</button>):(
+                            <button type='reset'  onClick={()=> setTodoEdit(item.id)}>Edit</button>
                         )}
                         
                     </div>
