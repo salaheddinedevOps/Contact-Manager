@@ -6,6 +6,7 @@ const App = ()=>{
     const [number,setNumber] = useState('');
     const [items,setItems] = useState([]);
     const [todoEdit, setTodoEdit] = useState(null);
+    const [textEditing, setTextEditing] = useState('');
     function handleChange(e){
         setItem(e.target.value);
     }
@@ -21,11 +22,22 @@ const App = ()=>{
         }
         if(newItem.content.length > 0){
             setItems([...items].concat(newItem));
+            console.log({newItem})
             setItem('');
             setNumber('');
         }else{
             alert('Enter Valid Syntax')
         }
+    }
+    function submitEdits(id){
+        const updatedItems = [...items].map((item)=>{
+            if(item.id === id){
+                item.content = textEditing;
+            }
+            return item;
+        });
+        setItems(updatedItems);
+        setTodoEdit(null);
     }
     return (
         <div className="App">
@@ -43,7 +55,7 @@ const App = ()=>{
                     <div className='item-content'>
                         {item.id === todoEdit ?(
                             <div>
-                            <input type='text' placeholder='Enter Your Edit' onChange={handleChange} />
+                            <input type='text' placeholder='Enter Your Edit' onChange={(e)=>{setTextEditing(e.target.value)}} />
                             <button  onClick={()=>setTodoEdit(7)}>Exit</button>
                             </div>
                             ):(
@@ -53,9 +65,9 @@ const App = ()=>{
                             )}
                     </div>
                     <div className='item-actions'>
-                        {item.id !== todoEdit ?(
-                            <button type='reset' onClick={()=> setTodoEdit(item.id)}>Edit</button>):(
-                            console.log('INVALID')
+                        {item.id === todoEdit ?(
+                            <button onClick={()=>submitEdits(item.id)}>SubmiT edit</button>):(
+                            <button type='reset' onClick={()=> setTodoEdit(item.id)}>Edit</button>
                         )}
                         
                     </div>
