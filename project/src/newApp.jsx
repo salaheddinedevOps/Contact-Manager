@@ -1,5 +1,14 @@
 import React,{useState} from  'react';
 import './App.css';
+function addContact(name, phone){
+    return{type:'CONTACT add', name:name, phone:phone}
+}
+const initialState = {
+    contact:''
+}
+function reducer(state= initialState, action){
+
+}
 const App = ()=>{
     const [item,setItem] = useState('');
     const [number,setNumber] = useState('');
@@ -69,7 +78,6 @@ const App = ()=>{
                             <button type='submit' id="submitEditButton" onClick={()=>submitEdits(item.id)}>SubmiT edit</button>):(
                             <button type='reset'  onClick={()=> setTodoEdit(item.id)}>Edit</button>
                         )}
-                        
                     </div>
                 </div>
                 ))}
